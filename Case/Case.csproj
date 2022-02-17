@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FF2597A3-D4B2-4EBC-B75D-1303EAE11980}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Case</RootNamespace>
+    <AssemblyName>Case</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="pages\Authorization.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\Book.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\Chat.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\PageStudent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\PageTeacher.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\Registration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\Timetable.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model\Academicplans.cs">
+      <DependentUpon>CaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Appendixs.cs">
+      <DependentUpon>CaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Attendances.cs">
+      <DependentUpon>CaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Auth.cs" />
+    <Compile Include="Model\Autherizations.cs">
+      <DependentUpon>CaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CaseModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CaseModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CaseModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CaseModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CaseModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Classes.cs">
+      <DependentUpon>CaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Marktypes.cs">
+      <DependentUpon>CaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Positions.cs">
+      <DependentUpon>CaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Semesters.cs">
+      <DependentUpon>CaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>CaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sp_helpdiagrams_Result.cs">
+      <DependentUpon>CaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Static.cs" />
+    <Compile Include="Model\Students.cs">
+      <DependentUpon>CaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Studentsubjectmarks.cs">
+      <DependentUpon>CaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Subjects.cs">
+      <DependentUpon>CaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sysdiagrams.cs">
+      <DependentUpon>CaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Teachers.cs">
+      <DependentUpon>CaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Timetables.cs">
+      <DependentUpon>CaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Authorization.xaml.cs">
+      <DependentUpon>Authorization.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Book.xaml.cs">
+      <DependentUpon>Book.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Chat.xaml.cs">
+      <DependentUpon>Chat.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\PageStudent.xaml.cs">
+      <DependentUpon>PageStudent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\PageTeacher.xaml.cs">
+      <DependentUpon>PageTeacher.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Registration.xaml.cs">
+      <DependentUpon>Registration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Timetable.xaml.cs">
+      <DependentUpon>Timetable.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EntityDeploy Include="Model\CaseModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>CaseModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model\CaseModel.edmx.diagram">
+      <DependentUpon>CaseModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="source\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="source\6d4b347bfd56169c1d6bd7b0cfae0518 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="source\blue_plus %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="source\pointer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="source\konvert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="source\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model\CaseModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>CaseModel.Context.cs</LastGenOutput>
+      <DependentUpon>CaseModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Model\CaseModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CaseModel.edmx</DependentUpon>
+      <LastGenOutput>CaseModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

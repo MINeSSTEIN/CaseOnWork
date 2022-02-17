@@ -1,0 +1,14 @@
+﻿using System.Windows;
+using System.Windows.Controls;
+
+namespace Case.Model
+{
+    public static class Static
+    {
+        /// <summary>
+        /// Главный фрейм приложения
+        /// </summary>
+        public static Frame FrmMain = new Frame();
+        public static УПEntities db = new УПEntities();
+    }
+}
