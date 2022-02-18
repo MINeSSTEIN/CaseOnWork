@@ -12,20 +12,15 @@ namespace Case.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Academicplans
+    public partial class Посещаемость
     {
-        public int id_Academicplan { get; set; }
-        public int id_Semester { get; set; }
-        public int id_Subject { get; set; }
-        public int id_Marktype { get; set; }
-        public int Hours { get; set; }
-        public int id_Teacher { get; set; }
-        public int id_Class { get; set; }
+        public int КодПосещяемости { get; set; }
+        public Nullable<int> КодУченик { get; set; }
+        public Nullable<System.DateTime> Дата { get; set; }
+        public Nullable<bool> Присутствие { get; set; }
+        public Nullable<int> КодПредмет { get; set; }
     
-        public virtual Classes Classes { get; set; }
-        public virtual Marktypes Marktypes { get; set; }
-        public virtual Semesters Semesters { get; set; }
-        public virtual Subjects Subjects { get; set; }
-        public virtual Teachers Teachers { get; set; }
+        public virtual Предмет Предмет { get; set; }
+        public virtual Ученик Ученик { get; set; }
     }
 }

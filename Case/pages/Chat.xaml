@@ -31,11 +31,10 @@
             <Image Source="/source/blue_plus (1).png" Stretch="None" />
         </Button>
 
-        <ComboBox FontSize="28"
+        <ComboBox FontSize="20"
                   Grid.Row="0"
                   Grid.Column="1"  
                   VerticalAlignment="Center">
-            <TextBlock Text="я предполагаю, тут будет происходить выбор собеседника"/>
         </ComboBox>
 
         <TextBlock Grid.Row="1"

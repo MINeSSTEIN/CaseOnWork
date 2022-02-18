@@ -44,70 +44,29 @@
             </StackPanel>
 
             <StackPanel Grid.Row="1" Grid.Column="1" Grid.RowSpan="4">
-                <Label Content="Фамилия"
+                <Label Content="ФИО"
                    FontSize="16"
                    FontWeight="Bold"/>
-                <TextBox x:Name="txb_familia"
+                <TextBox x:Name="txb_fio"
+                     FontSize="16"/>
+                <Label FontSize="16"
+                   FontWeight="Bold">Адрес</Label>
+                <TextBox x:Name="txb_adress"
                      FontSize="16"/>
 
-                <Label Content="Имя"
-                   FontSize="16"
-                   FontWeight="Bold"/>
-                <TextBox x:Name="txb_name"
-                     FontSize="16"/>
-
-                <Label Content="Отчество"
-                   FontSize="16"
-                   FontWeight="Bold"/>
-                <TextBox x:Name="txb_otchestvo" 
-                     FontSize="16"/>
+                <StackPanel Orientation="Horizontal"/>
 
                 <StackPanel Orientation="Horizontal">
-                    <Label Content="Дата рождения"
-                           Width="190"
-                   FontSize="16"
-                   FontWeight="Bold"/>                    
-
-                    <Label Content="Возраст"
-                           Margin="20,0,0,0"
-                   FontSize="16"
-                   FontWeight="Bold"/>                    
-                </StackPanel>
-
-                <StackPanel Orientation="Horizontal">
-                    <DatePicker x:Name="dpk_birthday"
-                                Width="190" 
-                                
-                     FontSize="16"/>
-
-                    <TextBox x:Name="txb_age"
-                             Margin="20,0,0,0"
-                             Width="190"
-                     FontSize="16"/>
-                </StackPanel>
-
-                <StackPanel Orientation="Horizontal">
-                    <Label Content="Пол"
-                           Width="190"
-                   FontSize="16"
-                   FontWeight="Bold"/>
-
                     <Label Content="Класс"
                            Margin="20,0,0,0"
                    FontSize="16"
-                   FontWeight="Bold"/>
+                   FontWeight="Bold" Width="47"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal">
-                    <ComboBox x:Name="cbx_sex"
-                             Width="190" 
-                     FontSize="16">
-                        <ComboBoxItem Content="Женский"/>
-                        <ComboBoxItem Content="Мужской"/>
-                    </ComboBox>
 
                     <ComboBox x:Name="cbx_class"
-                             Width="190"
+                             Width="363"
                              Margin="20,0,0,0"
                      FontSize="16"/>
                 </StackPanel>

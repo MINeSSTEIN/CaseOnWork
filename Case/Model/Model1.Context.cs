@@ -15,10 +15,10 @@ namespace Case.Model
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class УПEntities : DbContext
+    public partial class УпшкаEntities : DbContext
     {
-        public УПEntities()
-            : base("name=УПEntities")
+        public УпшкаEntities()
+            : base("name=УпшкаEntities")
         {
         }
     
@@ -27,20 +27,17 @@ namespace Case.Model
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Academicplans> Academicplans { get; set; }
-        public virtual DbSet<Appendixs> Appendixs { get; set; }
-        public virtual DbSet<Attendances> Attendances { get; set; }
-        public virtual DbSet<Autherizations> Autherizations { get; set; }
-        public virtual DbSet<Classes> Classes { get; set; }
-        public virtual DbSet<Marktypes> Marktypes { get; set; }
-        public virtual DbSet<Positions> Positions { get; set; }
-        public virtual DbSet<Semesters> Semesters { get; set; }
-        public virtual DbSet<Students> Students { get; set; }
-        public virtual DbSet<Studentsubjectmarks> Studentsubjectmarks { get; set; }
-        public virtual DbSet<Subjects> Subjects { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
-        public virtual DbSet<Teachers> Teachers { get; set; }
-        public virtual DbSet<Timetables> Timetables { get; set; }
+        public virtual DbSet<Авторизация> Авторизация { get; set; }
+        public virtual DbSet<Класс> Класс { get; set; }
+        public virtual DbSet<Посещаемость> Посещаемость { get; set; }
+        public virtual DbSet<Предмет> Предмет { get; set; }
+        public virtual DbSet<Рассписание> Рассписание { get; set; }
+        public virtual DbSet<Успеваемость> Успеваемость { get; set; }
+        public virtual DbSet<Ученик> Ученик { get; set; }
+        public virtual DbSet<Учитель> Учитель { get; set; }
+        public virtual DbSet<Чат> Чат { get; set; }
+        public virtual DbSet<Сообщения> Сообщения { get; set; }
     
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
         {

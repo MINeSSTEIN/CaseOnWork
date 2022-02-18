@@ -12,21 +12,24 @@ namespace Case.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Classes
+    public partial class Класс
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Classes()
+        public Класс()
         {
-            this.Academicplans = new HashSet<Academicplans>();
+            this.Рассписание = new HashSet<Рассписание>();
+            this.Ученик = new HashSet<Ученик>();
+            this.Учитель = new HashSet<Учитель>();
         }
     
-        public int id_class { get; set; }
-        public string Class { get; set; }
-        public int Academic_year { get; set; }
-        public int id_teacher { get; set; }
+        public int КодКласса { get; set; }
+        public string Навзание { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Academicplans> Academicplans { get; set; }
-        public virtual Teachers Teachers { get; set; }
+        public virtual ICollection<Рассписание> Рассписание { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Ученик> Ученик { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Учитель> Учитель { get; set; }
     }
 }

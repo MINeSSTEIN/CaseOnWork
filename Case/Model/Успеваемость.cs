@@ -12,14 +12,16 @@ namespace Case.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Studentsubjectmarks
+    public partial class Успеваемость
     {
-        public int id_Studentsubjectmark { get; set; }
-        public int id_Student { get; set; }
-        public int id_Marktype { get; set; }
-        public int id_Subject { get; set; }
+        public int КодУспеваемости { get; set; }
+        public Nullable<int> КодПредмет { get; set; }
+        public Nullable<int> КодСтудент { get; set; }
+        public Nullable<int> КодКласс { get; set; }
+        public string КомментарийУчителя { get; set; }
+        public string Оценка { get; set; }
     
-        public virtual Marktypes Marktypes { get; set; }
-        public virtual Students Students { get; set; }
+        public virtual Предмет Предмет { get; set; }
+        public virtual Ученик Ученик { get; set; }
     }
 }

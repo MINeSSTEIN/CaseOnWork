@@ -33,7 +33,7 @@ namespace Case.pages
 
         private void btn_login_Click(object sender, RoutedEventArgs e)
         {
-
+            Model.Auth.Authorisation(txb_login, txb_password);
         }
     }
 }

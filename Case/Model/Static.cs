@@ -9,6 +9,8 @@ namespace Case.Model
         /// Главный фрейм приложения
         /// </summary>
         public static Frame FrmMain = new Frame();
-        public static УПEntities db = new УПEntities();
+        public static УпшкаEntities db = new УпшкаEntities();
+        public static int currentAuth = 0;
+        public static bool isStudent = true;
     }
 }

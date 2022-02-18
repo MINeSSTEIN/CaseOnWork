@@ -12,21 +12,24 @@ namespace Case.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Marktypes
+    public partial class Предмет
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Marktypes()
+        public Предмет()
         {
-            this.Academicplans = new HashSet<Academicplans>();
-            this.Studentsubjectmarks = new HashSet<Studentsubjectmarks>();
+            this.Посещаемость = new HashSet<Посещаемость>();
+            this.Успеваемость = new HashSet<Успеваемость>();
+            this.Учитель = new HashSet<Учитель>();
         }
     
-        public int id_Marktype { get; set; }
-        public string Marktype { get; set; }
+        public int КодПредмета { get; set; }
+        public string Название { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Academicplans> Academicplans { get; set; }
+        public virtual ICollection<Посещаемость> Посещаемость { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Studentsubjectmarks> Studentsubjectmarks { get; set; }
+        public virtual ICollection<Успеваемость> Успеваемость { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Учитель> Учитель { get; set; }
     }
 }

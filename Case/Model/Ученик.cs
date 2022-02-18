@@ -12,24 +12,29 @@ namespace Case.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Subjects
+    public partial class Ученик
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Subjects()
+        public Ученик()
         {
-            this.Academicplans = new HashSet<Academicplans>();
-            this.Attendances = new HashSet<Attendances>();
-            this.Timetables = new HashSet<Timetables>();
+            this.Посещаемость = new HashSet<Посещаемость>();
+            this.Успеваемость = new HashSet<Успеваемость>();
+            this.Чат = new HashSet<Чат>();
         }
     
-        public int id_Subjects { get; set; }
-        public string Subject { get; set; }
+        public int КодУченика { get; set; }
+        public string ФИО { get; set; }
+        public Nullable<int> Класс { get; set; }
+        public string Адрес { get; set; }
+        public Nullable<int> КодАвторизаци { get; set; }
     
+        public virtual Авторизация Авторизация { get; set; }
+        public virtual Класс Класс1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Academicplans> Academicplans { get; set; }
+        public virtual ICollection<Посещаемость> Посещаемость { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Attendances> Attendances { get; set; }
+        public virtual ICollection<Успеваемость> Успеваемость { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Timetables> Timetables { get; set; }
+        public virtual ICollection<Чат> Чат { get; set; }
     }
 }

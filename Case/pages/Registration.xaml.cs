@@ -24,6 +24,7 @@ namespace Case.pages
         public Registration()
         {
             InitializeComponent();
+            Auth.FillCBs(cbx_class);
         }
 
         private void btn_goback_Click(object sender, RoutedEventArgs e)
@@ -33,7 +34,7 @@ namespace Case.pages
 
         private void btn_signin_Click(object sender, RoutedEventArgs e)
         {
-            Auth.Registration(txb_name, txb_familia, txb_otchestvo, dpk_birthday, txb_age, cbx_sex, cbx_class, txb_login, txb_password, txb_passwordrep);
+            Auth.Registration(txb_fio, txb_adress, cbx_class, txb_login, txb_password, txb_passwordrep);
         }
     }
 }

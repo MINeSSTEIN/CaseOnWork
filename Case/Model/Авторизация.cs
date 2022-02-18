@@ -12,22 +12,22 @@ namespace Case.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Semesters
+    public partial class Авторизация
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Semesters()
+        public Авторизация()
         {
-            this.Academicplans = new HashSet<Academicplans>();
-            this.Timetables = new HashSet<Timetables>();
+            this.Ученик = new HashSet<Ученик>();
+            this.Учитель = new HashSet<Учитель>();
         }
     
-        public int id_Semester { get; set; }
-        public string Classes { get; set; }
-        public string Semester { get; set; }
+        public int КодАвторизация { get; set; }
+        public string Логин { get; set; }
+        public string Пароль { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Academicplans> Academicplans { get; set; }
+        public virtual ICollection<Ученик> Ученик { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Timetables> Timetables { get; set; }
+        public virtual ICollection<Учитель> Учитель { get; set; }
     }
 }

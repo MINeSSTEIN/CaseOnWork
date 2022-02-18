@@ -12,30 +12,27 @@ namespace Case.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Teachers
+    public partial class Учитель
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Teachers()
+        public Учитель()
         {
-            this.Academicplans = new HashSet<Academicplans>();
-            this.Classes = new HashSet<Classes>();
+            this.Рассписание = new HashSet<Рассписание>();
+            this.Чат = new HashSet<Чат>();
         }
     
-        public int id_teacher { get; set; }
-        public string FIO { get; set; }
-        public System.DateTime Birthday { get; set; }
-        public string Education { get; set; }
-        public string Adress { get; set; }
-        public string Phone { get; set; }
-        public int id_Position { get; set; }
-        public int id_Autherization { get; set; }
+        public int КодУчителя { get; set; }
+        public string ФИО { get; set; }
+        public Nullable<int> КодПредмет { get; set; }
+        public Nullable<int> КодАвторизаци { get; set; }
+        public Nullable<int> КодКласса { get; set; }
     
+        public virtual Авторизация Авторизация { get; set; }
+        public virtual Класс Класс { get; set; }
+        public virtual Предмет Предмет { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Academicplans> Academicplans { get; set; }
-        public virtual Autherizations Autherizations { get; set; }
+        public virtual ICollection<Рассписание> Рассписание { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Classes> Classes { get; set; }
-        public virtual Positions Positions { get; set; }
-        public virtual Timetables Timetables { get; set; }
+        public virtual ICollection<Чат> Чат { get; set; }
     }
 }

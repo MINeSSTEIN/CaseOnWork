@@ -12,22 +12,22 @@ namespace Case.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Autherizations
+    public partial class Чат
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Autherizations()
+        public Чат()
         {
-            this.Students = new HashSet<Students>();
-            this.Teachers = new HashSet<Teachers>();
+            this.Сообщения = new HashSet<Сообщения>();
         }
     
-        public int id_Autherization { get; set; }
-        public string Login { get; set; }
-        public string Password { get; set; }
+        public int КодЧата { get; set; }
+        public int КодУченика { get; set; }
+        public Nullable<int> КодУчителя { get; set; }
+        public string Сообщение { get; set; }
     
+        public virtual Ученик Ученик { get; set; }
+        public virtual Учитель Учитель { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Students> Students { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Teachers> Teachers { get; set; }
+        public virtual ICollection<Сообщения> Сообщения { get; set; }
     }
 }

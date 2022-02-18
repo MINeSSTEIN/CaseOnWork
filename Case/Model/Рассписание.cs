@@ -12,18 +12,14 @@ namespace Case.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Positions
+    public partial class Рассписание
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Positions()
-        {
-            this.Teachers = new HashSet<Teachers>();
-        }
+        public int КодРассписания { get; set; }
+        public Nullable<int> КодКласс { get; set; }
+        public Nullable<int> КодУчитель { get; set; }
+        public string Кабинет { get; set; }
     
-        public int id_Positions { get; set; }
-        public string Position { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Teachers> Teachers { get; set; }
+        public virtual Класс Класс { get; set; }
+        public virtual Учитель Учитель { get; set; }
     }
 }

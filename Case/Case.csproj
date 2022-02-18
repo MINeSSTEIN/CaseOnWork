@@ -106,70 +106,61 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\Academicplans.cs">
-      <DependentUpon>CaseModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\Appendixs.cs">
-      <DependentUpon>CaseModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\Attendances.cs">
-      <DependentUpon>CaseModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Model\Auth.cs" />
-    <Compile Include="Model\Autherizations.cs">
-      <DependentUpon>CaseModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\CaseModel.Context.cs">
+    <Compile Include="Model\Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CaseModel.Context.tt</DependentUpon>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\CaseModel.cs">
+    <Compile Include="Model\Model1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CaseModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\CaseModel.Designer.cs">
+    <Compile Include="Model\Model1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CaseModel.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Model\Classes.cs">
-      <DependentUpon>CaseModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\Marktypes.cs">
-      <DependentUpon>CaseModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\Positions.cs">
-      <DependentUpon>CaseModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\Semesters.cs">
-      <DependentUpon>CaseModel.tt</DependentUpon>
+      <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
     <Compile Include="Model\sp_helpdiagramdefinition_Result.cs">
-      <DependentUpon>CaseModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\sp_helpdiagrams_Result.cs">
-      <DependentUpon>CaseModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Static.cs" />
-    <Compile Include="Model\Students.cs">
-      <DependentUpon>CaseModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\Studentsubjectmarks.cs">
-      <DependentUpon>CaseModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\Subjects.cs">
-      <DependentUpon>CaseModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Model\sysdiagrams.cs">
-      <DependentUpon>CaseModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Teachers.cs">
-      <DependentUpon>CaseModel.tt</DependentUpon>
+    <Compile Include="Model\Авторизация.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Timetables.cs">
-      <DependentUpon>CaseModel.tt</DependentUpon>
+    <Compile Include="Model\Класс.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Посещаемость.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Предмет.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Рассписание.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Сообщения.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Успеваемость.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Ученик.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Учитель.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Чат.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="pages\Authorization.xaml.cs">
       <DependentUpon>Authorization.xaml</DependentUpon>
@@ -209,12 +200,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="Model\CaseModel.edmx">
+    <EntityDeploy Include="Model\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>CaseModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Model\CaseModel.edmx.diagram">
-      <DependentUpon>CaseModel.edmx</DependentUpon>
+    <None Include="Model\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -244,19 +235,19 @@
     <Resource Include="source\icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Model\CaseModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>CaseModel.Context.cs</LastGenOutput>
-      <DependentUpon>CaseModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="Model\CaseModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>CaseModel.edmx</DependentUpon>
-      <LastGenOutput>CaseModel.cs</LastGenOutput>
-    </Content>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Content Include="Model\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

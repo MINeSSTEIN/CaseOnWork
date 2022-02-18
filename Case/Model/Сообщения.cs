@@ -12,15 +12,12 @@ namespace Case.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Attendances
+    public partial class Сообщения
     {
-        public int id_Attendance { get; set; }
-        public int id_Class { get; set; }
-        public int id_Teacher { get; set; }
-        public int id_Subject { get; set; }
-        public int Attendance { get; set; }
-        public int Absent { get; set; }
+        public int КодСообщения { get; set; }
+        public Nullable<int> КодЧата { get; set; }
+        public string Текст { get; set; }
     
-        public virtual Subjects Subjects { get; set; }
+        public virtual Чат Чат { get; set; }
     }
 }
